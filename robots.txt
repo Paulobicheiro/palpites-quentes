@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://paulobicheiro.github.io/palpites-quentes/sitemap.xml
