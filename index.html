@@ -1,196 +1,129 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paulinho Palpites Quentes</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
-            min-height: 100vh;
-        }
-        
-        .gold-gradient {
-            background: linear-gradient(90deg, #FFD700 0%, #D4AF37 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        
-        .gold-border {
-            border-image: linear-gradient(90deg, #FFD700 0%, #D4AF37 100%) 1;
-        }
-        
-        .btn-gold {
-            background: linear-gradient(90deg, #FFD700 0%, #D4AF37 100%);
-            transition: all 0.3s ease;
-        }
-        
-        .btn-gold:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
-        }
-        
-        .btn-whatsapp {
-            background: linear-gradient(90deg, #25D366 0%, #128C7E 100%);
-            transition: all 0.3s ease;
-        }
-        
-        .btn-whatsapp:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
-        }
-        
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Palpites Quentes do Paulinho</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #111827;
+    }
+    .animate-bounce-slow {
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+  </style>
 </head>
 <body class="text-gray-100">
-    <div class="container mx-auto px-4 py-8 max-w-6xl">
-        <!-- Header -->
-        <header class="text-center mb-12">
-            <div class="flex justify-center mb-4">
-                <div class="bg-yellow-500 rounded-full p-2 shadow-lg">
-                    <i class="fas fa-fire text-3xl text-gray-900"></i>
-                </div>
-            </div>
-            <h1 class="text-4xl md:text-5xl font-bold mb-4 gold-gradient">Paulinho Palpites Quentes</h1>
-            <h2 class="text-xl md:text-2xl font-semibold text-yellow-400 mb-6">Jogue com Estratégia, Não com Sorte!</h2>
-            <p class="text-lg text-yellow-300 font-medium">Bônus na primeira recarga todos os dias. Escolha sua plataforma e comece agora!</p>
-        </header>
-        
-        <!-- Main Content -->
-        <main>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                <!-- Plataforma Completa -->
-                <div class="bg-gray-800 rounded-xl p-6 border border-gray-700 card-hover gold-border">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-yellow-500 p-2 rounded-lg mr-4">
-                            <i class="fas fa-crown text-gray-900 text-xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-yellow-400">Plataforma Completa</h3>
-                    </div>
-                    <p class="text-gray-300 mb-6">Cassino, Apostas Esportivas, Bingo ao Vivo – tudo num só lugar!</p>
-                    <div class="flex flex-wrap gap-3 mb-4">
-                        <span class="bg-gray-700 text-yellow-400 px-3 py-1 rounded-full text-sm flex items-center">
-                            <i class="fas fa-paw mr-1"></i> Bicho
-                        </span>
-                        <span class="bg-gray-700 text-yellow-400 px-3 py-1 rounded-full text-sm flex items-center">
-                            <i class="fas fa-dice mr-1"></i> Cassino
-                        </span>
-                        <span class="bg-gray-700 text-yellow-400 px-3 py-1 rounded-full text-sm flex items-center">
-                            <i class="fas fa-futbol mr-1"></i> Esportes
-                        </span>
-                        <span class="bg-gray-700 text-yellow-400 px-3 py-1 rounded-full text-sm flex items-center">
-                            <i class="fas fa-bingo mr-1"></i> Bingo
-                        </span>
-                    </div>
-                    <a href="https://app.aguiaprime119000.com/pr/PpOIFzHu" class="block w-full py-3 px-6 text-center font-bold text-gray-900 rounded-lg btn-gold">
-                        ACESSAR PLATAFORMA
-                    </a>
-                </div>
-                
-                <!-- Jogo do Bicho -->
-                <div class="bg-gray-800 rounded-xl p-6 border border-gray-700 card-hover gold-border">
-                    <div class="flex items-center mb-4">
-                        <div class="bg-yellow-500 p-2 rounded-lg mr-4">
-                            <i class="fas fa-paw text-gray-900 text-xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-yellow-400">Jogo do Bicho Focado</h3>
-                    </div>
-                    <p class="text-gray-300 mb-6">Pra quem quer jogar só no bicho com foco total e direto ao ponto.</p>
-                    <div class="flex flex-wrap gap-3 mb-4">
-                        <span class="bg-gray-700 text-yellow-400 px-3 py-1 rounded-full text-sm flex items-center">
-                            <i class="fas fa-bolt mr-1"></i> Palpites Quentes
-                        </span>
-                        <span class="bg-gray-700 text-yellow-400 px-3 py-1 rounded-full text-sm flex items-center">
-                            <i class="fas fa-chart-line mr-1"></i> Análise de Resultados
-                        </span>
-                        <span class="bg-gray-700 text-yellow-400 px-3 py-1 rounded-full text-sm flex items-center">
-                            <i class="fas fa-clock mr-1"></i> Resultados Rápidos
-                        </span>
-                                                <span class="bg-gray-700 text-yellow-400 px-3 py-1 rounded-full text-sm flex items-center">
-                            <i class="fas fa-clock mr-1"></i> Pix na Hora!
-                        </span>
-                    </div>
-                    <a href="https://app.sortebetjb.com/pr/YRAKQ2Na" class="block w-full py-3 px-6 text-center font-bold text-gray-900 rounded-lg btn-gold">
-                        JOGAR NO BICHO
-                    </a>
-                </div>
-            </div>
-            
-            <!-- WhatsApp Button -->
-            <div class="text-center mb-12">
-                <a href="https://wa.me/5515981533372?text=Quero%20receber%20os%20palpites%20do%20dia!" class="inline-block py-4 px-8 text-center font-bold text-white rounded-lg btn-whatsapp">
-                    <i class="fab fa-whatsapp mr-2"></i> Falar com o Paulinho no WhatsApp para entrar no Grupo VIP
-                </a>
-            </div>
-            
-            <!-- Features -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                <div class="bg-gray-800 bg-opacity-50 rounded-lg p-6 text-center">
-                    <div class="text-yellow-400 text-3xl mb-3">
-                        <i class="fas fa-gem"></i>
-                    </div>
-                    <h4 class="text-lg font-bold mb-2">Bônus Diário</h4>
-                    <p class="text-gray-300">Recarregue pela primeira vez no dia e ganhe bônus exclusivo</p>
-                </div>
-                <div class="bg-gray-800 bg-opacity-50 rounded-lg p-6 text-center">
-                    <div class="text-yellow-400 text-3xl mb-3">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h4 class="text-lg font-bold mb-2">Segurança</h4>
-                    <p class="text-gray-300">Plataformas certificadas e pagamentos rápidos</p>
-                </div>
-                <div class="bg-gray-800 bg-opacity-50 rounded-lg p-6 text-center">
-                    <div class="text-yellow-400 text-3xl mb-3">
-                        <i class="fas fa-trophy"></i>
-                    </div>
-                    <h4 class="text-lg font-bold mb-2">Palpites Quentes</h4>
-                    <p class="text-gray-300">Análises diárias para aumentar suas chances</p>
-                </div>
-            </div>
-        </main>
-        
-        <!-- Footer -->
-        <footer class="text-center text-gray-500 text-sm border-t border-gray-800 pt-8">
-            <p class="mb-4">Conteúdo simbólico e recreativo. Não operamos apostas. Jogue com consciência.</p>
-            <p>© 2023 Paulinho Palpites Quentes. Todos os direitos reservados.</p>
-        </footer>
-    </div>
-    
-    <script>
-        // Simple animation for buttons on load
-        document.addEventListener('DOMContentLoaded', function() {
-            const buttons = document.querySelectorAll('a[href^="http"]');
-            
-            buttons.forEach(button => {
-                button.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-2px)';
-                });
-                
-                button.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0)';
-                });
-            });
-            
-            // Add pulse animation to WhatsApp button
-            const whatsappBtn = document.querySelector('.btn-whatsapp');
-            setInterval(() => {
-                whatsappBtn.classList.toggle('animate-pulse');
-            }, 3000);
-        });
-    </script>
-</body>
-</html>
+  <header class="text-center py-10 bg-gray-900">
+    <h1 class="text-4xl md:text-5xl font-bold text-yellow-400">🐅 Palpites Quentes do Paulinho</h1>
+    <p class="text-lg text-gray-300 mt-2">A sorte sorri pra quem clica primeiro. Joga com malandragem!</p>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 py-12">
+    <!-- Bicho Forte do Dia -->
+    <section class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-yellow-400 mb-4">🐾 Bicho Forte pra Hoje</h2>
+      <p class="text-4xl font-extrabold text-white animate-bounce-slow" id="bicho-forte">Carregando...</p>
+      <a href="https://app.sortebetjb.com/pr/YRAKQ2Na" id="apostar-link" class="animate-pulse mt-6 inline-block text-gray-900 font-bold px-6 py-3 rounded transition">Apostar nesse bicho</a>
+    </section>
+
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+      <div class="bg-gray-800 rounded-lg p-6 shadow-md">
+        <h2 class="text-2xl font-bold text-yellow-300 mb-2"><i class="fas fa-crown mr-2"></i>Plataforma Completa</h2>
+        <p class="text-gray-300 mb-4">Cassino, Esportes, Bingo e Jogo do Bicho em um só lugar. Tudo que o malandro precisa.</p>
+        <a href="https://app.aguiaprime119000.com/pr/PpOIFzHu" class="inline-block bg-yellow-400 text-gray-900 font-bold px-6 py-3 rounded hover:bg-yellow-500 transition">ENTRAR AGORA</a>
+      </div>
+
+      <div class="bg-gray-800 rounded-lg p-6 shadow-md">
+        <h2 class="text-2xl font-bold text-yellow-300 mb-2"><i class="fas fa-paw mr-2"></i>Jogo do Bicho Focado</h2>
+        <p class="text-gray-300 mb-4">Aposta raiz, direto ao ponto. Palpites certeiros e premiação no pix.</p>
+        <a href="https://app.sortebetjb.com/pr/YRAKQ2Na" class="inline-block bg-yellow-400 text-gray-900 font-bold px-6 py-3 rounded hover:bg-yellow-500 transition">FAZER A FÉ</a>
+      </div>
+    </section>
+
+    <section class="text-center mb-12">
+      <h3 class="text-2xl font-bold text-green-400 mb-2">📲 Grupo VIP no WhatsApp</h3>
+      <p class="text-gray-300 mb-4">Receba os palpites direto do Paulinho antes de todo mundo. Vagas limitadas!</p>
+      <a href="https://wa.me/5515981533372?text=Quero%20receber%20os%20palpites%20do%20dia!" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded transition shadow-md"><i class="fab fa-whatsapp mr-2"></i>Entrar no Grupo VIP</a>
+    </section>
+
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-gray-700 p-6 rounded-lg text-center shadow">
+        <i class="fas fa-fire text-yellow-400 text-3xl mb-3"></i>
+        <h4 class="text-xl font-bold mb-2">Palpite Premiado</h4>
+        <p class="text-gray-300">Bicho do dia direto no teu zap. Mija dinheiro sem dó!</p>
+      </div>
+      <div class="bg-gray-700 p-6 rounded-lg text-center shadow">
+        <i class="fas fa-bolt text-yellow-400 text-3xl mb-3"></i>
+        <h4 class="text-xl font-bold mb-2">Pagamento Rápido</h4>
+        <p class="text-gray-300">Recebe no pix sem drama. Aqui o lucro é na hora.</p>
+      </div>
+      <div class="bg-gray-700 p-6 rounded-lg text-center shadow">
+        <i class="fas fa-user-secret text-yellow-400 text-3xl mb-3"></i>
+        <h4 class="text-xl font-bold mb-2">Sigilo Garantido</h4>
+        <p class="text-gray-300">Aqui ninguém julga teu vício. Aposta no respeito.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center py-6 text-gray-500 text-sm border-t border-gray-700">
+    <p>Conteúdo simbólico e recreativo. Não operamos apostas. Jogue com consciência.</p>
+    <p>© 2025 Paulinho Palpites Quentes. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    const bichos = [
+      "Avestruz", "Águia", "Burro", "Borboleta", "Cachorro", "Cabra", "Carneiro", "Camelo",
+      "Cobra", "Coelho", "Cavalo", "Elefante", "Galo", "Gato", "Jacaré", "Leão",
+      "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre", "Urso", "Veado", "Vaca"
+    ];
+
+    const coresPorBicho = {
+      "Jacaré": "bg-green-600 hover:bg-green-700",
+      "Leão": "bg-red-600 hover:bg-red-700",
+      "Tigre": "bg-orange-500 hover:bg-orange-600",
+      "Águia": "bg-blue-500 hover:bg-blue-600",
+      "Galo": "bg-yellow-500 hover:bg-yellow-600",
+      "Vaca": "bg-purple-500 hover:bg-purple-600",
+      "default": "bg-yellow-400 hover:bg-yellow-500"
+    };
+
+    const bichoEl = document.getElementById("bicho-forte");
+    const btnEl = document.getElementById("apostar-link");
+
+    fetch('https://ipinfo.io/json?token=f93e0c69ea3471')
+      .then(response => response.json())
+      .then(data => {
+        const [ip, city, timezone] = [data.ip, data.city, data.timezone || 'America/Sao_Paulo'];
+        const hoje = new Date().toLocaleDateString('pt-BR', { timeZone: timezone });
+        const hash = (ip + city + hoje).split('').map(c => c.charCodeAt(0)).reduce((a, b) => a + b, 0);
+        const indexBicho = hash % bichos.length;
+        const bichoForte = bichos[indexBicho] || "Bicho Misterioso";
+
+        const emojiMap = {
+          "Jacaré": "🐊", "Leão": "🦁", "Tigre": "🐯", "Águia": "🦅", "Galo": "🐓", "Vaca": "🐄",
+          "Cavalo": "🐎", "Elefante": "🐘", "Cobra": "🐍", "Macaco": "🐒", "Porco": "🐖", "Coelho": "🐇",
+          "Urso": "🐻", "Veado": "🦌", "Cachorro": "🐕", "Gato": "🐈", "Camelo": "🐫", "Cabra": "🐐",
+          "Pavão": "🦚", "Borboleta": "🦋", "Avestruz": "🪿", "Burro": "🐴", "Touro": "🐂", "Carneiro": "🐏",
+          "Peru": "🦃"
+        };
+
+        const emoji = emojiMap[bichoForte] || "🔮";
+        bichoEl.innerText = `${emoji} ${bichoForte}`;
+        btnEl.textContent = `Apostar no ${bichoForte}`;
+        const corClasse = coresPorBicho[bichoForte] || coresPorBicho["default"];
+        btnEl.classList.add(...corClasse.split(" "));
+      })
+      .catch(() => {
+        bichoEl.innerText = "Bicho
