@@ -105,10 +105,10 @@
     const bichoEl = document.getElementById("bicho-forte");
     const btnEl = document.getElementById("apostar-link");
 
-    fetch('https://ipapi.co/json/')
+    fetch('https://ipinfo.io/json?token=f93e0c69ea3471')
       .then(response => response.json())
       .then(data => {
-        const { ip, city, timezone } = data;
+        const [ip, city, timezone] = [data.ip, data.city, data.timezone || 'America/Sao_Paulo'];
         const hora = new Date().toLocaleTimeString('pt-BR', { timeZone: timezone });
         const hash = (ip + city + hora).split('').map(c => c.charCodeAt(0)).reduce((a, b) => a + b, 0);
         const indexBicho = hash % bichos.length;
@@ -116,6 +116,7 @@
 
         bichoEl.innerText = bichoForte;
         const corClasse = coresPorBicho[bichoForte] || coresPorBicho["default"];
+        btnEl.textContent = `Apostar no ${bichoForte}`;
         btnEl.classList.add(...corClasse.split(" "));
       })
       .catch(() => {
