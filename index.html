@@ -99,31 +99,6 @@
       "default": "bg-yellow-400 hover:bg-yellow-500"
     };
 
-    const bichoEl = document.getElementById("bicho-forte");
-    const btnEl = document.getElementById("apostar-link");
-
-    fetch('https://ipinfo.io/json?token=f93e0c69ea3471')
-      .then(response => response.json())
-      .then(data => {
-        const [ip, city, timezone] = [data.ip, data.city, data.timezone || 'America/Sao_Paulo'];
-        const hoje = new Date().toLocaleDateString('pt-BR', { timeZone: timezone });
-        const hash = (ip + city + hoje).split('').map(c => c.charCodeAt(0)).reduce((a, b) => a + b, 0);
-        const indexBicho = hash % bichos.length;
-        const bichoForte = bichos[indexBicho] || "Bicho Misterioso";
-
-        const emojiMap = {
-          "Jacaré": "🐊", "Leão": "🦁", "Tigre": "🐯", "Águia": "🦅", "Galo": "🐓", "Vaca": "🐄",
-          "Cavalo": "🐎", "Elefante": "🐘", "Cobra": "🐍", "Macaco": "🐒", "Porco": "🐖", "Coelho": "🐇",
-          "Urso": "🐻", "Veado": "🦌", "Cachorro": "🐕", "Gato": "🐈", "Camelo": "🐫", "Cabra": "🐐",
-          "Pavão": "🦚", "Borboleta": "🦋", "Avestruz": "🪿", "Burro": "🐴", "Touro": "🐂", "Carneiro": "🐏",
-          "Peru": "🦃"
-        };
-
-        const emoji = emojiMap[bichoForte] || "🔮";
-        bichoEl.innerText = `${emoji} ${bichoForte}`;
-        btnEl.textContent = `Apostar no ${bichoForte}`;
-        const corClasse = coresPorBicho[bichoForte] || coresPorBicho["default"];
-        btnEl.classList.add(...corClasse.split(" "));
-      })
-      .catch(() => {
-        bichoEl.innerText = "Bicho
+    const emojiMap = {
+      "Jacaré": "🐊", "Leão": "🦁", "Tigre": "🐯", "Águia": "🦅", "Galo": "🐓", "Vaca": "🐄",
+      "Cavalo": "🐎", "Elefante": "🐘", "Cobra": "🐍", "Macaco": "🐒", "Porco":
