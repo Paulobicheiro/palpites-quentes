@@ -101,4 +101,29 @@
 
     const emojiMap = {
       "Jacaré": "🐊", "Leão": "🦁", "Tigre": "🐯", "Águia": "🦅", "Galo": "🐓", "Vaca": "🐄",
-      "Cavalo": "🐎", "Elefante": "🐘", "Cobra": "🐍", "Macaco": "🐒", "Porco":
+      "Cavalo": "🐎", "Elefante": "🐘", "Cobra": "🐍", "Macaco": "🐒", "Porco": "🐖", "Coelho": "🐇",
+      "Urso": "🐻", "Veado": "🦌", "Cachorro": "🐕", "Gato": "🐈", "Camelo": "🐫", "Cabra": "🐐",
+      "Pavão": "🦚", "Borboleta": "🦋", "Avestruz": "🪿", "Burro": "🐴", "Touro": "🐂", "Carneiro": "🐏",
+      "Peru": "🦃"
+    };
+
+    const bichoEl = document.getElementById("bicho-forte");
+    const btnEl = document.getElementById("apostar-link");
+
+    const hoje = new Date();
+    const dia = hoje.getDate();
+    const mes = hoje.getMonth() + 1;
+    const ano = hoje.getFullYear();
+
+    const hash = `${dia}${mes}${ano}`.split('').map(c => c.charCodeAt(0)).reduce((a, b) => a + b, 0);
+    const indexBicho = hash % bichos.length;
+    const bichoForte = bichos[indexBicho];
+    const emoji = emojiMap[bichoForte] || "🔮";
+    const corClasse = coresPorBicho[bichoForte] || coresPorBicho["default"];
+
+    bichoEl.innerText = `${emoji} ${bichoForte}`;
+    btnEl.textContent = `Apostar no ${bichoForte}`;
+    btnEl.classList.add(...corClasse.split(" "));
+  </script>
+</body>
+</html>
