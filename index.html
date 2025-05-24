@@ -35,7 +35,7 @@
     <section class="text-center mb-12">
       <h2 class="text-3xl font-bold text-yellow-400 mb-4">🐾 Bicho Forte pra Hoje</h2>
       <p class="text-4xl font-extrabold text-white animate-bounce-slow" id="bicho-forte">Carregando...</p>
-      <a href="https://app.sortebetjb.com/pr/YRAKQ2Na" id="apostar-link" class="mt-6 inline-block text-gray-900 font-bold px-6 py-3 rounded transition">Apostar nesse bicho</a>
+      <a href="https://app.sortebetjb.com/pr/YRAKQ2Na" id="apostar-link" class="animate-pulse mt-6 inline-block text-gray-900 font-bold px-6 py-3 rounded transition">Apostar nesse bicho</a>
       
     </section>
 
@@ -114,7 +114,15 @@
         const indexBicho = hash % bichos.length;
         const bichoForte = bichos[indexBicho] || "Bicho Misterioso";
 
-        bichoEl.innerText = bichoForte;
+        const emojiMap = {
+  "Jacaré": "🐊", "Leão": "🦁", "Tigre": "🐯", "Águia": "🦅", "Galo": "🐓", "Vaca": "🐄",
+  "Cavalo": "🐎", "Elefante": "🐘", "Cobra": "🐍", "Macaco": "🐒", "Porco": "🐖", "Coelho": "🐇",
+  "Urso": "🐻", "Veado": "🦌", "Cachorro": "🐕", "Gato": "🐈", "Camelo": "🐫", "Cabra": "🐐",
+  "Pavão": "🦚", "Borboleta": "🦋", "Avestruz": "🪿", "Burro": "🐴", "Touro": "🐂", "Carneiro": "🐏",
+  "Peru": "🦃"
+};
+const emoji = emojiMap[bichoForte] || "🔮";
+bichoEl.innerText = `${emoji} ${bichoForte}`;
         const corClasse = coresPorBicho[bichoForte] || coresPorBicho["default"];
         btnEl.textContent = `Apostar no ${bichoForte}`;
         btnEl.classList.add(...corClasse.split(" "));
