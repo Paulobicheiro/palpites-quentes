@@ -24,12 +24,8 @@
       animation: bounce 2s infinite;
     }
     @keyframes bounce {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
     .pulse-danger {
       animation: pulse 1.5s infinite;
@@ -55,6 +51,14 @@
     .cta-float:hover {
       background-color: #16a34a;
       transform: translateY(-3px);
+    }
+    @media (max-width: 768px) {
+      .cta-float {
+        bottom: 15px;
+        right: 15px;
+        font-size: 14px;
+        padding: 10px 16px;
+      }
     }
     #popup-bonus {
       position: fixed;
@@ -105,12 +109,52 @@
       <a href="https://app.sortebetjb.com/pr/YRAKQ2Na" id="apostar-link" class="pulse-danger mt-8 inline-block bg-yellow-300 text-gray-900 font-extrabold px-8 py-4 rounded-full transition hover:bg-yellow-400">Jogar Agora!</a>
     </section>
 
-    <!-- ... Aqui entrariam outras seções como grupo VIP, provas sociais etc ... -->
+    <section class="bg-gray-800 rounded-lg p-8 shadow-xl text-center mb-12">
+      <h3 class="text-2xl md:text-3xl font-bold text-green-400 mb-4">📲 Grupo VIP no WhatsApp</h3>
+      <p class="text-gray-300 mb-6">Receba os palpites direto do Paulinho antes de todo mundo. Vagas limitadas!</p>
+      <a href="https://wa.me/5515981533372?text=quero%20jogar%20com%20vc%20e%20participar%20do%20grupo%20vip%20de%20palpites" class="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-10 rounded-full transition shadow-lg">
+        <i class="fab fa-whatsapp mr-3"></i> Entrar no Grupo VIP
+      </a>
+    </section>
 
+    <section class="bg-gray-900 rounded-lg p-8 shadow-xl text-center mb-12">
+      <h3 class="text-2xl md:text-3xl font-bold text-yellow-400 mb-6">🎁 Plataformas com Bônus na Primeira Recarga</h3>
+      <div class="space-y-4">
+        <a href="https://app.sortebetjb.com/pr/YRAKQ2Na" class="block bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-gray-900 font-bold py-3 px-8 rounded-full transition">🐯 Foco Jogo do Bicho</a>
+        <a href="https://app.aguiaprime119000.com/pr/PpOIFzHu" class="block bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 text-white font-bold py-3 px-8 rounded-full transition">🎰 Cassino, Bingo, Bolão e Mais</a>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h3 class="text-2xl font-bold text-yellow-300 mb-6 text-center">💸 Comprovantes de PIX (todo dia tem!)</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <img src="Banca777.png" alt="Pix comprovante" class="rounded-lg shadow-lg">
+        <img src="pix2.png" alt="Pix comprovante" class="rounded-lg shadow-lg">
+        <img src="pix.png" alt="Pix comprovante" class="rounded-lg shadow-lg">
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h3 class="text-2xl font-bold text-yellow-300 mb-6 text-center">🗣️ Quem já jogou com Paulinho</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
+          <p class="italic">"Fiz 15 conto virar 120 em meia hora. Paulinho é bruxo!"</p>
+          <p class="mt-2 text-sm text-yellow-400 font-bold">– Zé da Feira</p>
+        </div>
+        <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
+          <p class="italic">"Sonhei com o Camelo e ele mandou no VIP. Acertei seco!"</p>
+          <p class="mt-2 text-sm text-yellow-400 font-bold">– Dona Lurdes da Lotérica</p>
+        </div>
+        <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
+          <p class="italic">"Achei que era meme, agora jogo todo dia. Só lucro!"</p>
+          <p class="mt-2 text-sm text-yellow-400 font-bold">– Tião do Pix</p>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <a href="https://wa.me/5515981533372?text=bora%20jogar%20com%20paulinho" class="cta-float pulse-danger">
-    🚀 VIP Hoje (4 vagas)
+  <a href="https://wa.me/5515981533372?text=quero%20jogar%20com%20vc%20e%20participar%20do%20grupo%20vip%20de%20palpites" class="cta-float pulse-danger">
+    📢 Entrar no Grupo VIP
   </a>
 
   <footer class="text-center py-6 text-gray-400 text-sm border-t border-gray-700 mt-10">
