@@ -5,21 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Paulinho Palpites Quentes</title>
   <meta name="description" content="Acesse os palpites quentes do Paulinho! Grupo VIP, jogo do bicho, cassino, bingo e mais. Bicho quente do dia e comprovantes reais.">
-  <link rel="manifest" href="/manifest.json">
-  <link rel="apple-touch-icon" href="/icon-192.png">
   <meta name="theme-color" content="#111827">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js')
-        .then(reg => console.log('Service Worker registrado', reg))
-        .catch(err => console.error('Erro no SW', err));
-    }
-  </script>
   <script>
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
@@ -95,7 +86,7 @@
     <section class="bg-gray-800 rounded-lg p-8 shadow-xl text-center mb-12">
       <h3 class="text-2xl md:text-3xl font-bold text-green-400 mb-4">📲 Grupo VIP no WhatsApp</h3>
       <p class="text-gray-300 mb-6">Receba os palpites direto do Paulinho antes de todo mundo. Vagas limitadas!</p>
-      <a href="https://wa.me/5515981533372?text=quero%20jogar%20com%20vc%20e%20participar%20do%20grupo%20vip%20de%20palpites" class="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-10 rounded-full transition shadow-lg">
+      <a href="https://wa.me/5515981533372?text=quero%20jogar%20com%20vc%20e%20participar%20do%20grupo%20vip%20de%20palpites" onclick="fbq('track', 'Lead');" class="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-10 rounded-full transition shadow-lg">
         <i class="fab fa-whatsapp mr-3"></i> Entrar no Grupo VIP
       </a>
     </section>
