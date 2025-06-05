@@ -82,18 +82,19 @@
 </head>
 <body class="text-gray-100">
   <!-- conteúdo original aqui -->
-  
   <div id="bonusPopup" class="popup">
     <h2 class="text-xl font-bold mb-2">🎁 BÔNUS SECRETO LIBERADO!</h2>
     <p class="mb-4">Clique abaixo e garanta sua vantagem agora mesmo!</p>
     <a href="https://app.sortebetjb.com/pr/YRAKQ2Na">
       <button>PEGAR MEU BÔNUS</button>
     </a>
+    <audio id="cashSound" src="https://www.soundjay.com/misc/sounds/cash-register-01.mp3"></audio>
   </div>
 
   <script>
     setTimeout(() => {
       document.getElementById('bonusPopup').classList.add('active');
+      document.getElementById('cashSound').play();
     }, 8000);
   </script>
 </body>
