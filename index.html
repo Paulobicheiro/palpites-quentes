@@ -49,6 +49,16 @@
       background-color: #16a34a;
       transform: translateY(-3px);
     }
+    .marquee {
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      animation: marquee 25s linear infinite;
+    }
+    @keyframes marquee {
+      0%   { transform: translateX(100%) }
+      100% { transform: translateX(-100%) }
+    }
   </style>
 </head>
 <body class="text-gray-100">
@@ -62,6 +72,15 @@
       <h2 class="text-3xl md:text-4xl font-bold text-gray-900 drop-shadow mb-4">🔥 Bicho Quente do Dia 🔥</h2>
       <p class="text-5xl md:text-6xl font-bold animate-bounce-slow text-white" id="bicho-forte">Carregando...</p>
       <a href="https://app.sortebetjb.com/pr/YRAKQ2Na" id="apostar-link" class="pulse-danger mt-8 inline-block bg-yellow-300 text-gray-900 font-extrabold px-8 py-4 rounded-full transition hover:bg-yellow-400">Jogar Agora!</a>
+    </section>
+
+    <section id="resultado-ao-vivo" class="bg-gray-800 text-yellow-300 text-center p-4 rounded-lg mt-10 shadow-md">
+      <h3 class="text-xl font-bold mb-2">🎯 Resultado ao Vivo</h3>
+      <p id="resultado-bicho" class="text-lg">Carregando resultado...</p>
+    </section>
+
+    <section class="bg-gray-900 text-yellow-400 font-semibold p-3 rounded-lg shadow-md my-10 marquee">
+      🤑 Ganhador do dia: Zé da Feira sacou R$ 300 no Pix | Maria da Lotérica fez 25 virar 220 | Novato João cravou no camelo 🐫 e levou R$ 450 🔥🔥🔥
     </section>
 
     <section class="bg-gray-800 rounded-lg p-8 shadow-xl text-center mb-12">
@@ -119,12 +138,26 @@
 
   <script>
     const bichos = ["Avestruz", "Águia", "Burro", "Borboleta", "Cachorro", "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo", "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre", "Urso", "Veado", "Vaca"];
-    const emojiMap = {"Jacaré": "🐊", "Leão": "🦁", "Tigre": "🐯", "Águia": "🦅", "Galo": "🐓", "Vaca": "🐄", "Cavalo": "🐎", "Elefante": "🐘", "Cobra": "🐍", "Macaco": "🐒", "Porco": "🐖", "Coelho": "🐇", "Urso": "🐻", "Veado": "🦌", "Cachorro": "🐕", "Gato": "🐈", "Camelo": "🐫", "Cabra": "🐐", "Pavão": "🦚", "Borboleta": "🦋", "Avestruz": "🩿", "Burro": "🐴", "Touro": "🐂", "Carneiro": "🐏", "Peru": "🦃" };
+    const emojiMap = {"Jacaré": "🐊", "Leão": "🦁", "Tigre": "🐯", "Águia": "🦅", "Galo": "🐓", "Vaca": "🐄", "Cavalo": "🐎", "Elefante": "🐘", "Cobra": "🐍", "Macaco": "🐒", "Porco": "🐖", "Coelho": "🐇", "Urso": "🐻", "Veado": "🦌", "Cachorro": "🐕", "Gato": "🐈", "Camelo": "🐫", "Cabra": "🐐", "Pavão": "🦚", "Borboleta": "🦋", "Avestruz": "🪿", "Burro": "🐴", "Touro": "🐂", "Carneiro": "🐏", "Peru": "🦃" };
     const hoje = new Date();
     const hash = `${hoje.getDate()}${hoje.getMonth()+1}${hoje.getFullYear()}`.split('').map(c => c.charCodeAt(0)).reduce((a,b) => a+b, 0);
     const bicho = bichos[hash % bichos.length];
     document.getElementById("bicho-forte").textContent = `${emojiMap[bicho] || '🔮'} ${bicho}`;
     document.getElementById("apostar-link").textContent = `Jogar no ${bicho}`;
+
+    function gerarMilhar() {
+      return Math.floor(1000 + Math.random() * 9000);
+    }
+    function resultadoFake() {
+      const agora = new Date();
+      const bichoFake = bichos[Math.floor(Math.random() * bichos.length)];
+      const milhar = gerarMilhar();
+      const hora = agora.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+      const texto = `${emojiMap[bichoFake] || '🔮'} ${bichoFake} (Grupo ${Math.floor(Math.random() * 25) + 1}) | Milhar: ${milhar} | ${hora}`;
+      document.getElementById("resultado-bicho").textContent = texto;
+    }
+    resultadoFake();
+    setInterval(resultadoFake, 15000);
   </script>
 </body>
 </html>
