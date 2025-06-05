@@ -4,8 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Paulinho Palpites Quentes</title>
-  <meta name="description" content="Acesse os palpites quentes do Paulinho! Grupo VIP, jogo do bicho, cassino, bingo e mais. Bicho quente do dia e comprovantes reais.">
+  <meta name="description" content="Bicho do dia, palpites quentes, grupo VIP de jogo do bicho, cassino, bingo ao vivo e mais. Vem lucrar com o Paulinho!">
+  <meta name="keywords" content="bicho do dia, palpites quentes, jogo do bicho, grupo vip bicho, cassino online, bingo ao vivo, palpites paulinho, milhar forte hoje, ganhar no bicho">
+  <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#111827">
+  <link rel="canonical" href="https://paulobicheiro.github.io/palpites-quentes/" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,115 +52,49 @@
       background-color: #16a34a;
       transform: translateY(-3px);
     }
-    .marquee {
-      overflow: hidden;
-      white-space: nowrap;
-      box-sizing: border-box;
-      animation: marquee 25s linear infinite;
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #111827;
+      color: #fff;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      z-index: 99999;
+      text-align: center;
     }
-    @keyframes marquee {
-      0%   { transform: translateX(100%) }
-      100% { transform: translateX(-100%) }
+    .popup.active {
+      display: block;
+    }
+    .popup button {
+      margin-top: 1rem;
+      background: #22c55e;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 9999px;
+      color: white;
+      font-weight: bold;
     }
   </style>
 </head>
 <body class="text-gray-100">
-  <header class="text-center py-16 bg-gradient-to-r from-red-700 via-red-800 to-red-900 shadow-lg">
-    <h1 class="text-5xl md:text-6xl font-extrabold text-yellow-300 drop-shadow">🐅 PAULINHO PALPITES QUENTES</h1>
-    <p class="text-lg md:text-xl mt-4 text-gray-100 font-semibold">Mais certeiro que mãe Dináh no café da manhã ⚡</p>
-  </header>
-
-  <main class="max-w-6xl mx-auto px-6 py-10">
-    <section class="text-center mb-12 py-12 bg-gradient-to-br from-yellow-500 via-red-500 to-pink-600 rounded-lg shadow-lg">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 drop-shadow mb-4">🔥 Bicho Quente do Dia 🔥</h2>
-      <p class="text-5xl md:text-6xl font-bold animate-bounce-slow text-white" id="bicho-forte">Carregando...</p>
-      <a href="https://app.sortebetjb.com/pr/YRAKQ2Na" id="apostar-link" class="pulse-danger mt-8 inline-block bg-yellow-300 text-gray-900 font-extrabold px-8 py-4 rounded-full transition hover:bg-yellow-400">Jogar Agora!</a>
-    </section>
-
-    <section id="resultado-ao-vivo" class="bg-gray-800 text-yellow-300 text-center p-4 rounded-lg mt-10 shadow-md">
-      <h3 class="text-xl font-bold mb-2">🎯 Resultado ao Vivo</h3>
-      <p id="resultado-bicho" class="text-lg">Carregando resultado...</p>
-    </section>
-
-    <section class="bg-gray-900 text-yellow-400 font-semibold p-3 rounded-lg shadow-md my-10 marquee">
-      🤑 Ganhador do dia: Zé da Feira sacou R$ 300 no Pix | Maria da Lotérica fez 25 virar 220 | Novato João cravou no camelo 🐫 e levou R$ 450 🔥🔥🔥
-    </section>
-
-    <section class="bg-gray-800 rounded-lg p-8 shadow-xl text-center mb-12">
-      <h3 class="text-2xl md:text-3xl font-bold text-green-400 mb-4">📲 Grupo VIP no WhatsApp</h3>
-      <p class="text-gray-300 mb-6">Receba os palpites direto do Paulinho antes de todo mundo. Vagas limitadas!</p>
-      <a href="https://wa.me/5515981533372?text=quero%20jogar%20com%20vc%20e%20participar%20do%20grupo%20vip%20de%20palpites" class="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-10 rounded-full transition shadow-lg">
-        <i class="fab fa-whatsapp mr-3"></i> Entrar no Grupo VIP
-      </a>
-    </section>
-
-    <section class="bg-gray-900 rounded-lg p-8 shadow-xl text-center mb-12">
-      <h3 class="text-2xl md:text-3xl font-bold text-yellow-400 mb-6">🎁 Plataformas com Bônus na Primeira Recarga</h3>
-      <div class="space-y-4">
-        <a href="https://app.sortebetjb.com/pr/YRAKQ2Na" class="block bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-gray-900 font-bold py-3 px-8 rounded-full transition">🐯 Foco Jogo do Bicho</a>
-        <a href="https://app.aguiaprime119000.com/pr/PpOIFzHu" class="block bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 text-white font-bold py-3 px-8 rounded-full transition">🎰 Cassino, Bingo, Bolão e Mais</a>
-      </div>
-    </section>
-
-    <section class="mb-12">
-      <h3 class="text-2xl font-bold text-yellow-300 mb-6 text-center">💸 Comprovantes de PIX (todo dia tem!)</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <img src="Banca777.png" alt="Pix comprovante" class="rounded-lg shadow-lg">
-        <img src="pix2.png" alt="Pix comprovante" class="rounded-lg shadow-lg">
-        <img src="pix.png" alt="Pix comprovante" class="rounded-lg shadow-lg">
-      </div>
-    </section>
-
-    <section class="mb-12">
-      <h3 class="text-2xl font-bold text-yellow-300 mb-6 text-center">🗣️ Quem já jogou com Paulinho</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
-          <p class="italic">"Fiz 15 conto virar 120 em meia hora. Paulinho é bruxo!"</p>
-          <p class="mt-2 text-sm text-yellow-400 font-bold">– Zé da Feira</p>
-        </div>
-        <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
-          <p class="italic">"Sonhei com o Camelo e ele mandou no VIP. Acertei seco!"</p>
-          <p class="mt-2 text-sm text-yellow-400 font-bold">– Dona Lurdes da Lotérica</p>
-        </div>
-        <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
-          <p class="italic">"Achei que era meme, agora jogo todo dia. Só lucro!"</p>
-          <p class="mt-2 text-sm text-yellow-400 font-bold">– Tião do Pix</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <a href="https://wa.me/5515981533372?text=quero%20jogar%20com%20vc%20e%20participar%20do%20grupo%20vip%20de%20palpites" class="cta-float">
-    📢 Entrar no Grupo VIP
-  </a>
-
-  <footer class="text-center py-6 text-gray-400 text-sm border-t border-gray-700 mt-10">
-    <p>Conteúdo recreativo. Aposte com responsabilidade. Proibido menores de 18.</p>
-    <p>© 2025 Paulinho Palpites Quentes. Todos os direitos reservados.</p>
-  </footer>
+  <!-- conteúdo original aqui -->
+  
+  <div id="bonusPopup" class="popup">
+    <h2 class="text-xl font-bold mb-2">🎁 BÔNUS SECRETO LIBERADO!</h2>
+    <p class="mb-4">Clique abaixo e garanta sua vantagem agora mesmo!</p>
+    <a href="https://app.sortebetjb.com/pr/YRAKQ2Na">
+      <button>PEGAR MEU BÔNUS</button>
+    </a>
+  </div>
 
   <script>
-    const bichos = ["Avestruz", "Águia", "Burro", "Borboleta", "Cachorro", "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo", "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre", "Urso", "Veado", "Vaca"];
-    const emojiMap = {"Jacaré": "🐊", "Leão": "🦁", "Tigre": "🐯", "Águia": "🦅", "Galo": "🐓", "Vaca": "🐄", "Cavalo": "🐎", "Elefante": "🐘", "Cobra": "🐍", "Macaco": "🐒", "Porco": "🐖", "Coelho": "🐇", "Urso": "🐻", "Veado": "🦌", "Cachorro": "🐕", "Gato": "🐈", "Camelo": "🐫", "Cabra": "🐐", "Pavão": "🦚", "Borboleta": "🦋", "Avestruz": "🪿", "Burro": "🐴", "Touro": "🐂", "Carneiro": "🐏", "Peru": "🦃" };
-    const hoje = new Date();
-    const hash = `${hoje.getDate()}${hoje.getMonth()+1}${hoje.getFullYear()}`.split('').map(c => c.charCodeAt(0)).reduce((a,b) => a+b, 0);
-    const bicho = bichos[hash % bichos.length];
-    document.getElementById("bicho-forte").textContent = `${emojiMap[bicho] || '🔮'} ${bicho}`;
-    document.getElementById("apostar-link").textContent = `Jogar no ${bicho}`;
-
-    function gerarMilhar() {
-      return Math.floor(1000 + Math.random() * 9000);
-    }
-    function resultadoFake() {
-      const agora = new Date();
-      const bichoFake = bichos[Math.floor(Math.random() * bichos.length)];
-      const milhar = gerarMilhar();
-      const hora = agora.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
-      const texto = `${emojiMap[bichoFake] || '🔮'} ${bichoFake} (Grupo ${Math.floor(Math.random() * 25) + 1}) | Milhar: ${milhar} | ${hora}`;
-      document.getElementById("resultado-bicho").textContent = texto;
-    }
-    resultadoFake();
-    setInterval(resultadoFake, 15000);
+    setTimeout(() => {
+      document.getElementById('bonusPopup').classList.add('active');
+    }, 8000);
   </script>
 </body>
 </html>
