@@ -119,7 +119,7 @@
 
   <script>
     const bichos = ["Avestruz", "Águia", "Burro", "Borboleta", "Cachorro", "Cabra", "Carneiro", "Camelo", "Cobra", "Coelho", "Cavalo", "Elefante", "Galo", "Gato", "Jacaré", "Leão", "Macaco", "Porco", "Pavão", "Peru", "Touro", "Tigre", "Urso", "Veado", "Vaca"];
-    const emojiMap = {"Jacaré": "🐊", "Leão": "🦁", "Tigre": "🐯", "Águia": "🦅", "Galo": "🐓", "Vaca": "🐄", "Cavalo": "🐎", "Elefante": "🐘", "Cobra": "🐍", "Macaco": "🐒", "Porco": "🐖", "Coelho": "🐇", "Urso": "🐻", "Veado": "🦌", "Cachorro": "🐕", "Gato": "🐈", "Camelo": "🐫", "Cabra": "🐐", "Pavão": "🦚", "Borboleta": "🦋", "Avestruz": "🪿", "Burro": "🐴", "Touro": "🐂", "Carneiro": "🐏", "Peru": "🦃" };
+    const emojiMap = {"Jacaré": "🐊", "Leão": "🦁", "Tigre": "🐯", "Águia": "🦅", "Galo": "🐓", "Vaca": "🐄", "Cavalo": "🐎", "Elefante": "🐘", "Cobra": "🐍", "Macaco": "🐒", "Porco": "🐖", "Coelho": "🐇", "Urso": "🐻", "Veado": "🦌", "Cachorro": "🐕", "Gato": "🐈", "Camelo": "🐫", "Cabra": "🐐", "Pavão": "🦚", "Borboleta": "🦋", "Avestruz": "🩿", "Burro": "🐴", "Touro": "🐂", "Carneiro": "🐏", "Peru": "🦃" };
     const hoje = new Date();
     const hash = `${hoje.getDate()}${hoje.getMonth()+1}${hoje.getFullYear()}`.split('').map(c => c.charCodeAt(0)).reduce((a,b) => a+b, 0);
     const bicho = bichos[hash % bichos.length];
