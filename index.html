@@ -5,11 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Paulinho Palpites Quentes</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #111827;
+      background: linear-gradient(to bottom, #111827, #1f2937);
+      min-height: 100vh;
     }
     .animate-bounce-slow {
       animation: bounce 2s infinite;
@@ -40,11 +44,12 @@
       padding: 14px 24px;
       border-radius: 9999px;
       font-weight: bold;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      transition: background-color 0.3s;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+      transition: background-color 0.3s, transform 0.3s;
     }
     .cta-float:hover {
       background-color: #16a34a;
+      transform: translateY(-3px);
     }
     @media (max-width: 768px) {
       .cta-float {
@@ -57,55 +62,55 @@
   </style>
 </head>
 <body class="text-gray-100">
-  <header class="text-center py-10 bg-red-700">
-    <h1 class="text-5xl font-extrabold text-yellow-300">🐅 PAULINHO PALPITES QUENTES</h1>
-    <p class="text-lg mt-3 text-white font-semibold">Mais certeiro que mãe Dináh no café da manhã ⚡</p>
+  <header class="text-center py-16 bg-gradient-to-r from-red-700 via-red-800 to-red-900 shadow-lg">
+    <h1 class="text-5xl md:text-6xl font-extrabold text-yellow-300 drop-shadow">🐅 PAULINHO PALPITES QUENTES</h1>
+    <p class="text-lg md:text-xl mt-4 text-gray-100 font-semibold">Mais certeiro que mãe Dináh no café da manhã ⚡</p>
   </header>
 
   <main class="max-w-6xl mx-auto px-6 py-10">
-    <section class="text-center mb-12">
-      <h2 class="text-3xl font-bold text-yellow-400 mb-4">🔥 Bicho Quente do Dia 🔥</h2>
-      <p class="text-5xl font-bold animate-bounce-slow text-green-400" id="bicho-forte">Carregando...</p>
-      <a href="https://app.sortebetjb.com/pr/YRAKQ2Na" id="apostar-link" class="pulse-danger mt-6 inline-block bg-yellow-400 text-gray-900 font-bold px-6 py-3 rounded transition">Jogar Agora!</a>
+    <section class="text-center mb-12 py-12 bg-gradient-to-br from-yellow-500 via-red-500 to-pink-600 rounded-lg shadow-lg">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 drop-shadow mb-4">🔥 Bicho Quente do Dia 🔥</h2>
+      <p class="text-5xl md:text-6xl font-bold animate-bounce-slow text-white" id="bicho-forte">Carregando...</p>
+      <a href="https://app.sortebetjb.com/pr/YRAKQ2Na" id="apostar-link" class="pulse-danger mt-8 inline-block bg-yellow-300 text-gray-900 font-extrabold px-8 py-4 rounded-full transition hover:bg-yellow-400">Jogar Agora!</a>
     </section>
 
-    <section class="bg-gray-800 rounded-lg p-6 shadow-md text-center mb-12">
-      <h3 class="text-2xl font-bold text-green-400 mb-4">📲 Grupo VIP no WhatsApp</h3>
-      <p class="text-gray-300 mb-4">Receba os palpites direto do Paulinho antes de todo mundo. Vagas limitadas!</p>
-      <a href="https://wa.me/5515981533372?text=quero%20jogar%20com%20vc%20e%20participar%20do%20grupo%20vip%20de%20palpites" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded transition shadow-md">
-        <i class="fab fa-whatsapp mr-2"></i> Entrar no Grupo VIP
+    <section class="bg-gray-800 rounded-lg p-8 shadow-xl text-center mb-12">
+      <h3 class="text-2xl md:text-3xl font-bold text-green-400 mb-4">📲 Grupo VIP no WhatsApp</h3>
+      <p class="text-gray-300 mb-6">Receba os palpites direto do Paulinho antes de todo mundo. Vagas limitadas!</p>
+      <a href="https://wa.me/5515981533372?text=quero%20jogar%20com%20vc%20e%20participar%20do%20grupo%20vip%20de%20palpites" class="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-10 rounded-full transition shadow-lg">
+        <i class="fab fa-whatsapp mr-3"></i> Entrar no Grupo VIP
       </a>
     </section>
 
-    <section class="bg-gray-900 rounded-lg p-6 shadow-md text-center mb-12">
-      <h3 class="text-2xl font-bold text-yellow-400 mb-4">🎁 Plataformas com Bônus na Primeira Recarga</h3>
+    <section class="bg-gray-900 rounded-lg p-8 shadow-xl text-center mb-12">
+      <h3 class="text-2xl md:text-3xl font-bold text-yellow-400 mb-6">🎁 Plataformas com Bônus na Primeira Recarga</h3>
       <div class="space-y-4">
-        <a href="https://app.sortebetjb.com/pr/YRAKQ2Na" class="block bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-6 rounded transition">🐯 Foco Jogo do Bicho</a>
-        <a href="https://app.aguiaprime119000.com/pr/PpOIFzHu" class="block bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded transition">🎰 Cassino, Bingo, Bolão e Mais</a>
+        <a href="https://app.sortebetjb.com/pr/YRAKQ2Na" class="block bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-gray-900 font-bold py-3 px-8 rounded-full transition">🐯 Foco Jogo do Bicho</a>
+        <a href="https://app.aguiaprime119000.com/pr/PpOIFzHu" class="block bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 text-white font-bold py-3 px-8 rounded-full transition">🎰 Cassino, Bingo, Bolão e Mais</a>
       </div>
     </section>
 
     <section class="mb-12">
       <h3 class="text-2xl font-bold text-yellow-300 mb-6 text-center">💸 Comprovantes de PIX (todo dia tem!)</h3>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <img src="Banca777.png" alt="Pix comprovante" class="rounded-lg shadow">
-        <img src="pix2.png" alt="Pix comprovante" class="rounded-lg shadow">
-        <img src="pix.png" alt="Pix comprovante" class="rounded-lg shadow">
+        <img src="Banca777.png" alt="Pix comprovante" class="rounded-lg shadow-lg">
+        <img src="pix2.png" alt="Pix comprovante" class="rounded-lg shadow-lg">
+        <img src="pix.png" alt="Pix comprovante" class="rounded-lg shadow-lg">
       </div>
     </section>
 
     <section class="mb-12">
       <h3 class="text-2xl font-bold text-yellow-300 mb-6 text-center">🗣️ Quem já jogou com Paulinho</h3>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-gray-700 p-4 rounded shadow">
+        <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
           <p class="italic">"Fiz 15 conto virar 120 em meia hora. Paulinho é bruxo!"</p>
           <p class="mt-2 text-sm text-yellow-400 font-bold">– Zé da Feira</p>
         </div>
-        <div class="bg-gray-700 p-4 rounded shadow">
+        <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
           <p class="italic">"Sonhei com o Camelo e ele mandou no VIP. Acertei seco!"</p>
           <p class="mt-2 text-sm text-yellow-400 font-bold">– Dona Lurdes da Lotérica</p>
         </div>
-        <div class="bg-gray-700 p-4 rounded shadow">
+        <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
           <p class="italic">"Achei que era meme, agora jogo todo dia. Só lucro!"</p>
           <p class="mt-2 text-sm text-yellow-400 font-bold">– Tião do Pix</p>
         </div>
@@ -117,7 +122,7 @@
     📢 Entrar no Grupo VIP
   </a>
 
-  <footer class="text-center py-6 text-gray-400 text-sm border-t border-gray-700">
+  <footer class="text-center py-6 text-gray-400 text-sm border-t border-gray-700 mt-10">
     <p>Conteúdo recreativo. Aposte com responsabilidade. Proibido menores de 18.</p>
     <p>© 2025 Paulinho Palpites Quentes. Todos os direitos reservados.</p>
   </footer>
@@ -143,3 +148,77 @@
   </script>
 </body>
 </html>
+significados.html
++6
+-3
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Significados dos Animais</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to bottom, #1e1e1e, #2b2b2b);
+      color: #f5f5f5;
+      font-family: 'Poppins', sans-serif;
+      padding: 30px;
+    }
+    h1 {
+      text-align: center;
+      color: #fbc02d;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      max-width: 700px;
+      margin: auto;
+    }
+    li {
+      margin: 15px 0;
+      background: #2a2a2a;
+      padding: 15px;
+      border-left: 5px solid #ffab00;
+      border-radius: 6px;
+    }
+    a {
+      display: block;
+      margin-top: 30px;
+      text-align: center;
+      color: #4caf50;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="margin-bottom:30px;">Significados Simbólicos dos 25 Animais</h1>
+  <ul>
+    <li><strong>01 - Avestruz:</strong> visão ampla, alerta, sabedoria ancestral.</li>
+    <li><strong>02 - Águia:</strong> visão aguçada, poder, soberania.</li>
+    <li><strong>03 - Burro:</strong> teimosia, resistência, simplicidade.</li>
+    <li><strong>04 - Borboleta:</strong> transformação, leveza, espiritualidade.</li>
+    <li><strong>05 - Cachorro:</strong> lealdade, proteção, fidelidade.</li>
+    <li><strong>06 - Cabra:</strong> astúcia, persistência, obstinação.</li>
+    <li><strong>07 - Carneiro:</strong> impulso, renovação, fertilidade.</li>
+    <li><strong>08 - Camelo:</strong> resistência, adaptação, viagem longa.</li>
+    <li><strong>09 - Cobra:</strong> mistério, transmutação, energia vital.</li>
+    <li><strong>10 - Coelho:</strong> rapidez, fertilidade, intuição.</li>
+    <li><strong>11 - Cavalo:</strong> força, liberdade, superação.</li>
+    <li><strong>12 - Elefante:</strong> memória, poder, sabedoria ancestral.</li>
+    <li><strong>13 - Galo:</strong> coragem, aviso, renovação matinal.</li>
+    <li><strong>14 - Gato:</strong> intuição, independência, proteção espiritual.</li>
+    <li><strong>15 - Jacaré:</strong> paciência, força oculta, sobrevivência.</li>
+    <li><strong>16 - Leão:</strong> coragem, liderança, realeza.</li>
+    <li><strong>17 - Macaco:</strong> adaptação, esperteza, comunicação.</li>
+    <li><strong>18 - Porco:</strong> abundância, instinto, simplicidade.</li>
+    <li><strong>19 - Pavão:</strong> beleza, vaidade, exibição.</li>
+    <li><strong>20 - Periquito:</strong> alegria, agilidade, comunicação leve.</li>
+    <li><strong>21 - Touro:</strong> força, estabilidade, firmeza.</li>
+    <li><strong>22 - Tigre:</strong> instinto, coragem, domínio.</li>
+    <li><strong>23 - Urso:</strong> proteção, força interior, introspecção.</li>
+    <li><strong>24 - Veado:</strong> leveza, agilidade, alerta.</li
