@@ -40,17 +40,21 @@
       bottom: 20px;
       right: 20px;
       z-index: 9999;
-      background-color: #22c55e;
+      background: linear-gradient(45deg, #ffcc00, #ff6600);
       color: white;
       padding: 14px 24px;
       border-radius: 9999px;
       font-weight: bold;
       box-shadow: 0 6px 20px rgba(0,0,0,0.4);
-      transition: background-color 0.3s, transform 0.3s;
+      animation: blink 1s infinite;
+      transition: transform 0.3s;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
     }
     .cta-float:hover {
-      background-color: #16a34a;
-      transform: translateY(-3px);
+      transform: scale(1.1);
     }
     .popup {
       display: none;
@@ -81,7 +85,13 @@
   </style>
 </head>
 <body class="text-gray-100">
-  <!-- conteúdo original aqui -->
+
+  <!-- Botão flutuante piscando -->
+  <a href="https://wa.me/5515981533372?text=quero%20jogar%20com%20vc%20e%20participar%20do%20grupo%20vip%20de%20palpites" class="cta-float">
+    🎯 ENTRAR NO GRUPO VIP
+  </a>
+
+  <!-- Popup bônus secreto -->
   <div id="bonusPopup" class="popup">
     <h2 class="text-xl font-bold mb-2">🎁 BÔNUS SECRETO LIBERADO!</h2>
     <p class="mb-4">Clique abaixo e garanta sua vantagem agora mesmo!</p>
@@ -97,5 +107,6 @@
       document.getElementById('cashSound').play();
     }, 8000);
   </script>
+
 </body>
 </html>
