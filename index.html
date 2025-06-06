@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '123456789012345');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=123456789012345&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Paulinho Palpites Quentes</title>
@@ -104,13 +123,13 @@
     <section class="text-center mb-12 py-12 bg-gradient-to-br from-yellow-500 via-red-500 to-pink-600 rounded-lg shadow-lg">
       <h2 class="text-3xl md:text-4xl font-bold text-gray-900 drop-shadow mb-4">🔥 Bicho Quente do Dia 🔥</h2>
       <p class="text-5xl md:text-6xl font-bold animate-bounce-slow text-white" id="bicho-forte">Carregando...</p>
-      <a href="https://app.sortebetjb.com/pr/YRAKQ2Na?utm_source=site&utm_medium=botao&utm_campaign=bicho" id="apostar-link" class="pulse-danger mt-8 inline-block bg-yellow-300 text-gray-900 font-extrabold px-8 py-4 rounded-full transition transform hover:scale-105 shadow-xl border-4 border-yellow-400">Jogar Agora!</a>
+      <a href="https://app.sortebetjb.com/pr/YRAKQ2Na?utm_source=site&utm_medium=botao&utm_campaign=bicho" id="apostar-link" onclick="fbq('track', 'Lead');" class="pulse-danger mt-8 inline-block bg-yellow-300 text-gray-900 font-extrabold px-8 py-4 rounded-full transition transform hover:scale-105 shadow-xl border-4 border-yellow-400">Jogar Agora!</a>
     </section>
 
     <section class="bg-gray-800 rounded-lg p-8 shadow-xl text-center mb-12">
       <h3 class="text-2xl md:text-3xl font-bold text-green-400 mb-4">📲 Grupo VIP no WhatsApp</h3>
       <p class="text-gray-300 mb-6">Receba os palpites direto do Paulinho antes de todo mundo. Vagas limitadas!</p>
-      <a href="https://wa.me/5515981533372?text=quero%20jogar%20com%20vc%20e%20participar%20do%20grupo%20vip%20de%20palpites" class="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-extrabold py-3 px-10 rounded-full transition transform hover:scale-105 shadow-xl border-4 border-green-400">
+      <a href="https://chat.whatsapp.com/DTtHapAcj9X80It9xsBWut" onclick="fbq('track', 'Contact');" class="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-extrabold py-3 px-10 rounded-full transition transform hover:scale-105 shadow-xl border-4 border-green-400">
         <i class="fab fa-whatsapp mr-3"></i> Entrar no Grupo VIP
       </a>
     </section>
@@ -151,7 +170,7 @@
     </section>
   </main>
 
-  <a href="https://wa.me/5515981533372?text=quero%20jogar%20com%20vc%20e%20participar%20do%20grupo%20vip%20de%20palpites" class="cta-float pulse-danger transform hover:scale-105">
+  <a href="https://chat.whatsapp.com/DTtHapAcj9X80It9xsBWut" onclick="fbq('track', 'Contact');" class="cta-float pulse-danger transform hover:scale-105">
     📢 Entrar no Grupo VIP
   </a>
 
@@ -186,5 +205,21 @@
   <div style="display:none">
     jogo do bicho, palpites, palpites do dia, sorteio, ganhar no jogo do bicho, cassino online, bolão, sorte, palpites certeiros, paulinho palpites, pix jogo do bicho, como ganhar no bicho
   </div>
+
+<script>
+  setTimeout(function() {
+    fbq('trackCustom', 'TempoNaPagina15s');
+  }, 15000);
+</script>
+
+
+<script>
+  window.addEventListener("scroll", function() {
+    if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight * 0.9)) {
+      fbq('trackCustom', 'Scroll90');
+    }
+  });
+</script>
+
 </body>
 </html>
