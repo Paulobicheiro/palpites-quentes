@@ -129,7 +129,7 @@
     <section class="bg-gray-800 rounded-lg p-8 shadow-xl text-center mb-12">
       <h3 class="text-2xl md:text-3xl font-bold text-green-400 mb-4">📲 Grupo VIP no WhatsApp</h3>
       <p class="text-gray-300 mb-6">Receba os palpites direto do Paulinho antes de todo mundo. Vagas limitadas!</p>
-      <a href="https://chat.whatsapp.com/DTtHapAcj9X80It9xsBWut" onclick="fbq('track', 'Contact');" class="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-extrabold py-3 px-10 rounded-full transition transform hover:scale-105 shadow-xl border-4 border-green-400">
+      <a href="https://wa.me/5515981533372?text=quero%20jogar%20com%20vc%20e%20participar%20do%20grupo%20vip%20de%20palpites" onclick="fbq('track', 'Contact');" class="inline-flex items-center justify-center bg-green-500 hover:bg-green-600 text-white font-extrabold py-3 px-10 rounded-full transition transform hover:scale-105 shadow-xl border-4 border-green-400">
         <i class="fab fa-whatsapp mr-3"></i> Entrar no Grupo VIP
       </a>
     </section>
@@ -170,7 +170,7 @@
     </section>
   </main>
 
-  <a href="https://chat.whatsapp.com/DTtHapAcj9X80It9xsBWut" onclick="fbq('track', 'Contact');" class="cta-float pulse-danger transform hover:scale-105">
+  <a href="https://wa.me/5515981533372?text=quero%20jogar%20com%20vc%20e%20participar%20do%20grupo%20vip%20de%20palpites" onclick="fbq('track', 'Contact');" class="cta-float pulse-danger transform hover:scale-105">
     📢 Entrar no Grupo VIP
   </a>
 
@@ -219,6 +219,30 @@
       fbq('trackCustom', 'Scroll90');
     }
   });
+</script>
+
+
+<div id="group-join-popup" style="position: fixed; bottom: 100px; left: 20px; background-color: #22c55e; color: white; padding: 8px 14px; border-radius: 12px; font-weight: bold; box-shadow: 0 4px 12px rgba(0,0,0,0.5); z-index: 9999; display: none; font-family: Poppins, sans-serif;"></div>
+
+<script>
+  const nomesFake = [
+    "Matheus entrou no grupo", "Jorgas entrou no grupo", "Lucão entrou no grupo",
+    "Patrícia entrou no grupo", "Ana Lúcia entrou no grupo", "Felipe entrou no grupo",
+    "Mariana entrou no grupo", "Paulo entrou no grupo", "Davi entrou no grupo",
+    "Joãozinho entrou no grupo", "Vitão entrou no grupo"
+  ];
+
+  function mostrarNotificacao() {
+    const container = document.getElementById("group-join-popup");
+    const nome = nomesFake[Math.floor(Math.random() * nomesFake.length)];
+    container.textContent = nome;
+    container.style.display = "block";
+    setTimeout(() => {
+      container.style.display = "none";
+    }, 4000);
+  }
+
+  setInterval(mostrarNotificacao, 15000); // A cada 15s mostra uma notificação fake
 </script>
 
 </body>
