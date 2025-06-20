@@ -194,7 +194,7 @@ src="https://www.facebook.com/tr?id=1033841665600594&ev=PageView&noscript=1"
     const hash = `${hoje.getDate()}${hoje.getMonth()+1}${hoje.getFullYear()}`.split('').map(c => c.charCodeAt(0)).reduce((a,b) => a+b, 0);
     const bicho = bichos[hash % bichos.length];
     document.getElementById("bicho-forte").textContent = `${emojiMap[bicho] || '🔮'} ${bicho}`;
-    document.getElementById("apostar-link").textContent = `Quero faturar com ${bicho} AGORA 💸`;
+    document.getElementById("apostar-link").textContent = `Quero jogar no ${bicho} AGORA 💸`;
 
     setTimeout(() => {
       document.getElementById('popup-bonus').style.display = 'block';
